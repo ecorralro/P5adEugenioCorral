@@ -1,3 +1,3 @@
 from ecdb_conector import Ecdb
-Conexion1 = Jvdb("miempresa")
-Conexion1.insert("clientes","cliente10","este es otro contenido de prueba")
+Conexion1 = Ecdb("miempresa")
+Conexion1.select("clientes","cliente1","")
