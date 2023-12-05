@@ -21,4 +21,19 @@ class Ecdb:
         self.contenido = contenido
         comando = '"C:\\Users\\PC-Nacho\\Documents\\GitHub\\Acceso a datos\\P5adEugenioCorral\\P3ecdb.exe" '+self.operacion+' '+self.basededatos+' '+self.coleccion+' '+self.documento+' "'+self.contenido+'"'
         resultado = subprocess.run(comando,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
-        print(resultado)
+        print(resultado.stdout)
+    def update(self,coleccion,documento,contenido_nuevo):
+        self.operacion = "update"
+        self.coleccion = coleccion
+        self.documento = documento
+        self.contenido_nuevo = contenido_nuevo
+        comando = '"C:\\Users\\PC-Nacho\\Documents\\GitHub\\Acceso a datos\\P5adEugenioCorral\\P3ecdb.exe" '+self.operacion+' '+self.basededatos+' '+self.coleccion+' '+self.documento+' "'+self.contenido_nuevo+'"'
+        resultado = subprocess.run(comando,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+        return(resultado.stdout)
+    def delete(self,coleccion,documento):
+        self.operacion = "delete"
+        self.coleccion = coleccion
+        self.documento = documento
+        comando = '"C:\\Users\\PC-Nacho\\Documents\\GitHub\\Acceso a datos\\P5adEugenioCorral\\P3ecdb.exe" '+self.operacion+' '+self.basededatos+' '+self.coleccion+' '+self.documento+''
+        resultado = subprocess.run(comando,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+        return(resultado)

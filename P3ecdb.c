@@ -21,7 +21,7 @@ int main(int argc,char *argv[]){
         strcat(ruta,documento);
         strcat(ruta,".json");
         archivo = fopen(ruta,"r");
-        printf("te doy datos:\n");
+        //printf("te doy datos:\n");
         char linea[1024];
         while(fgets(linea,sizeof(linea),archivo) != NULL){
             printf("Linea: %s",linea);
