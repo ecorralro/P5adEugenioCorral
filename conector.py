@@ -13,7 +13,7 @@ while True:
     if opcion == "0":
         break
     elif opcion == "1":
-        Conexion1.update(input("Que coleccion:"), input("Que documento:"), input("Que contenido nuevo:"))
+        Conexion1.update(input("Que coleccion:"), input("Que documento:"), input("Que documento nuevo:"))
     elif opcion == "2":
         Conexion1.select(input("Que coleccion:"), input("Que documento:"), "")
     elif opcion == "3":
